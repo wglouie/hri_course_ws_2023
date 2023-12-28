@@ -9,8 +9,8 @@ def add_two_ints_client(x,y):
         add_two_ints = rospy.ServiceProxy('adder_service', Adder)
         resp1 = add_two_ints(x,y)
         return resp1.result
-    except rospy.ServiceException, e:
-        print "Service call failed: %s"%e
+    except rospy.ServiceException as e:
+        print("Service call failed: {}".format(e))
 
 
 def usage():
@@ -23,8 +23,8 @@ if __name__ == '__main__':
         x = int(sys.argv[1])
         y = int(sys.argv[2])
     else:
-        print usage()
+        print(usage())
         sys.exit(1)
 
-    print "Requesting %s+%s"%(x,y)
-    print "%s + %s = %s"%(x,y, add_two_ints_client(x,y))
+    print("Requesting {}+{}".format(x,y))
+    print ("{} + {} = {}".format(x,y, add_two_ints_client(x,y)))

@@ -24,8 +24,8 @@ class FollowBot:
         h, w, d = image.shape
         search_top = 3*h/4
         search_bottom = 3*h/4 + 20
-        mask[0:search_top, 0:w] = 0
-        mask[search_bottom:h, 0:w] = 0
+        mask[0:int(search_top), 0:w] = 0
+        mask[int(search_bottom):h, 0:w] = 0
         cv2.imshow("mask", mask)
 
         #Calculate centroid of the yellow line

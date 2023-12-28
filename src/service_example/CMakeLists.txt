@@ -20,3 +20,7 @@ add_service_files(
 
 generate_messages()
 catkin_package()
+
+catkin_install_python(PROGRAMS scripts/service_advertiser.py scripts/service_client.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)

@@ -5,14 +5,14 @@ import sys
 if __name__ == '__main__':
     # Print total arguements passed
     n = len(sys.argv)
-    print "Total arguments passed: {}".format(n)
+    print("Total arguments passed: {}".format(n))
 
     # Print individual python
-    print "\nName of the python script: {}".format(sys.argv[0])
+    print("\nName of the python script: {}".format(sys.argv[0]))
 
     # Print all arguements passed
 
-    print "\nArguements passed:"
+    print("\nArguements passed:")
 
     for i in range(1, n):
         print(sys.argv[i])
@@ -23,4 +23,4 @@ if __name__ == '__main__':
     for i in range(1, n):
         sum += int(sys.argv[i])
 
-    print "\nResult: {}".format(sum)
+    print("\nResult: {}".format(sum))

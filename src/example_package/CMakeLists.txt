@@ -12,3 +12,7 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 catkin_package()
+
+catkin_install_python(PROGRAMS scripts/topic_publisher.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
